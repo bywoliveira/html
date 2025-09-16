@@ -1,0 +1,55 @@
+/* Menu principal horizontal */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: flex;         
+     /* itens lado a lado */
+}
+
+li {
+    position: relative;     /* necessário para o submenu */
+}
+
+a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #555;
+}
+
+/* Submenu escondido */
+.sub {
+    display: none;
+    /* Não vai mostrar o sub */
+    position: absolute;
+    top: 100%;             /* aparece abaixo do item pai */
+    left: 0;
+    background-color: #555;
+    min-width: 150px;
+}
+
+.linksub {
+    padding: 10px;
+}
+
+/* Mostrar submenu no hover */
+li:hover > ul {
+    display: block;
+    /* O sub só vai aparecer por causa do hover */
+}
+body{
+    background-color: rgb(51, 51, 149);
+}
+a:hover{
+        color:rgb(78, 239, 66);
+        text-decoration:underline;
+        background-color: rgb(84, 139, 59);
+        font-size: 15px;
+    }
+    

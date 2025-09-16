@@ -1,0 +1,46 @@
+*{
+    margin:20;
+    padding:20;
+    box-sizing: border-box; 
+}
+/* Aplica a todos os elemtos e deve ser o primeiro */
+
+
+.destaque{
+    color: blue;
+    font-weight: bold;
+}
+/* .classe, reutilizavel em varios elementos */
+#titulo-principal {
+    color: red;
+    text-align: center;
+}
+/* #id, único para um elemento específico */
+p{
+    font-size: 30px;
+    line-height:1.5;
+}
+/* tag, aplica a todos os elementos */
+h1, h2, h3{
+    font-family: Arial, sans-serif;
+    color: darkgreen;
+}
+/* agrupamento de seletores */
+/* ctrl+.+; para fazer comentários */
+h4{
+    line-height: 2.5;
+    letter-spacing: 4px;
+    word-spacing:15px;
+}
+img{
+    width: 300px;
+    border: 3px solid red;
+    display: block;
+    /* Faz ela se comportar como um bloco únco na linha */
+    margin: auto;
+    /* Centraliza ele horizontalmente, desde que tenha uma largura(width) */
+}
+ul{
+    list-style-type: disc;
+    /* é ym marcador importante para se fazer menu, pode ser cicle, disc, decimal e none */
+}
