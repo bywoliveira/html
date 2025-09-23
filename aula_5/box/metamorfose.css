@@ -1,0 +1,76 @@
+ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    overflow: hidden;
+    /* para o menu não "estourar" dependendo do conteúdo */
+}
+li{
+    float: left;
+    /* Ordenar um do lado do outro */
+}
+a{
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    /* Não precisa clicar necessariamente no nome, um pouco embaixo vai funcionar */
+    text-decoration:none;
+}
+a:hover{
+        color:red;
+        text-decoration:underline;
+        background-color: rgb(166, 115, 96);
+        font-size: 15px;
+    }
+h2{
+    border: 2px solid rgb(11, 11, 39);
+    border-radius: 10px;
+    width: 100px; 
+}
+#analise {
+    border: 2px solid rgb(11, 11, 39);
+    border-radius: 10px;
+    width: 400px; 
+}
+.img{
+      width: 150px; 
+      height: 250px; 
+      border-radius: 10px; 
+      border: 5px solid rgb(11, 11, 39);
+
+}
+body{
+    background-color: rgb(123, 100, 144);
+}
+    table,th,td{
+        border-radius:1px;
+        border-color: rgb(119, 12, 12);
+        background-color: rgb(80, 72, 164);
+    }
+    tr {
+        vertical-align:top;
+    }
+.observacoes {
+    width: 300px;
+    margin-left: 200px;
+    margin-top: -250px;
+    margin-bottom: 40px;
+    background-color: rgb(123, 100, 144);
+}
+.kafta{
+     width: 160px; 
+      height: 220px; 
+      border-radius: 10px; 
+      border: 5px solid rgb(11, 11, 39);
+     margin-top: -400px;
+     margin-bottom: 40px;
+     margin-left: 600px;
+}
+.sobre{
+    width: 300px;
+    margin-left: 800px;
+    margin-top: -300px;
+    margin-bottom: 30px;
+    background-color: rgb(123, 100, 144);
+}

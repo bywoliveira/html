@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramação de elementos</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+        }
+        .item1{
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+             /* right: 0px;  */
+            /* Em relação ao container, ele anda 50px */
+             /* bottom: 0px;  */
+            /* para ir para baixo */
+             position: relative;
+            /* float: left; */
+            z-index: 15px;
+            top:50px;
+            left: 50px;
+            
+
+        }
+        .item2{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: relative;
+            /* float: left; */
+            z-index:2;
+        }
+        body{
+            background-color: rgb(89, 53, 122);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item1"></div>
+       <div class="item2"></div>
+    </div>
+</body>
+</html>
