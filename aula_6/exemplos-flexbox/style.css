@@ -1,0 +1,179 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(81, 81, 142);
+}
+
+section {
+  margin-bottom: 40px;
+  /* Espaço entre cada  seção */
+}
+
+h2 {
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  color: rgb(8, 252, 81);
+  text-align: center;
+}
+
+/* ativação do flex para todos os containers */
+/* container flex e itens flex */
+.container-flex{
+    display: flex;
+    background-color: rgb(26, 30, 66);
+    gap: 10px
+    /* Gap é o espaço entre os itens dentro do container  */
+    /* É o que vai ficar para fora dos itens pequenos */
+}
+.item-flex{
+    background-color: rgb(0, 38, 255);
+    padding: 20px;
+    border: solid black;
+    /* Ele mexe dentro do quadradinho dos itens */
+}
+
+/* Flex direction- elementos vão ficar em linha ou coluna */
+/* Direção do flexlinha (padrão) */
+.direcao-linha{
+flex-direction:row;
+/* Não vai ter diferença porque já era o padrão dele ser linha */
+}
+.direcao-coluna{
+    flex-direction:column
+    /* Vai deixa ele em coluna, um embaixo do outro e vai pega a linha toda */
+}
+
+/* 3-Flex wrap */
+.wrap{
+    flex-wrap:wrap;
+    /* Ele vai da a quebra de linha, vai deixando os itens para baixo de acordo com a tela */
+    /* Ele alinha de acordo com a tela, se não tivesse o wrap, ele não iria se adaptar de acordo com a tela */
+}
+.nowrap{
+    flex-wrap: nowrap;
+    /* Não muda nada, porque já é padrão ele ser assim e não se adaptar ao tamanho da tela */
+}
+
+/* Justify-content- horizontal */
+.justificar-inicio{
+    justify-content: start;
+    /* ele e flexstar é a mesma coisa, mas o start é a abreviação do flexstar, mas o flex star é o padrão, é o que faz os itens ficarem na eswuerda, que da a entender que ele é o inicio */
+}
+.justificar-fim{
+    justify-content: end;
+    /* ele vai começar n final, é o inverso do inicio */
+}
+.justificar-centro{
+    justify-content: center;
+    /* vai alinhar ele no centro */
+}
+.justificar-space-between{
+    justify-content: space-between;
+    /* São os espaços entre os elementos, cola os itens nas extremidades e divide igualmente*/
+}
+.justificar-space-around{
+    justify-content: space-around;
+    /* É quase igual o anterior, só fica um pouco mais próximo */
+}
+.justificar-space-evenly{
+    justify-content: space-evenly;
+    /*tenta deixar o mesmo espaço entre oe itens  */
+}
+
+/* Alinhamento vertical */
+.alinhar-items .container-flex{
+    height: 300px;
+    /* vai deixa o espaço maior para mexer na altura */
+}
+.alinhar-stretch{
+    align-items: stretch;
+    /* é o padrão, não muda nada, só deixa eles na vertical */
+}
+
+ .alinhar-inicio{
+    align-items: start;
+    /* Se você não quer que eles estiquem automaticamente */
+ }
+ .alinhar-fim{
+    align-items: end;
+    /* Começa no fim do quadrado, mas na vertical */
+ }
+ .alinhar-centro{
+    align-items: center;
+    /* Vai alinhar na vertical no centro */
+ }
+.alinhar-baseline{
+    align-items: baseline;
+    /* Colocou um paragrafo no item 2 e deixo ele maior */
+}
+.alinhar-conteudo{
+    align-content: center;
+    height: 600px;  /*definir altura para demonstrar o align content */
+}
+.alinhar-conteudo .caixa{
+    flex: 0 0 30%;
+    /* para aumentar e fazer com que surja a quebra de linha */
+    /* os números são comandos respectivamente */
+}
+.ordem1{
+    order: 1;
+}
+.ordem2{
+    order: 2;
+}
+.ordem3{
+    order: 3;
+}
+/* no html ele está ao contrario, esta 3,2,1  */
+
+/* Flex grow */
+.exemplo-grow .item-flex{
+    flex-basis: 100px;
+}
+.crescer1{
+    flex-grow:2;
+    /* para crecer o item 1 */
+}
+.crescer2{
+    flex-grow: 2;
+}
+
+/* Posicionamento especificoa para cada item */
+.alinhar-items-individuais .container-flex{
+    height: 300px;
+}
+
+ .self-inicio{
+    align-self: flex-start;
+}
+.self-centro{
+    align-self: center;
+}
+.self-fim{
+    align-self:flex-end;
+}
+.menu-nav a{
+    text-decoration: none;
+    padding: 8px 15px;
+    transition:0.3s;
+    /* estilização do link */
+}
+.menu-nav{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    font-family: fantasy;
+    gap: 40px;
+}
+.menu-nav a:hover{
+    border-bottom: 2px solid blue;
+    color:rgb(192, 121, 50)
+    /* para quando chegar com o mouse */
+}
+
+.responsivo{
+    flex-wrap: wrap;
+}
