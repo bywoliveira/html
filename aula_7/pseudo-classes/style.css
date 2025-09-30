@@ -1,0 +1,38 @@
+button:hover{
+    background-color: blue;
+    color: white;
+}
+
+input:focus{
+    outline: 2px solid rgb(55, 250, 91);
+    /* outline fica apenas no contorno  */
+     background-color: red; 
+    /* quando você clica fica red */
+}
+p:first-child{
+    font-weight: bold;
+    /* Primeiro da lista */
+}
+li:last-child{
+    color:red;
+    /* Ultimo da lista */
+}
+tr:nth-child(even){
+    background-color: rgb(164, 79, 79);
+    /* Vai aplicar a cor vermelha apenas nas linhas pares, mas não necessariamente só cor */
+
+}
+tr:nth-child(odd){
+ background-color: rgb(70, 174, 174);
+ /* Vai aplicar nas linhas impares */
+}
+table{
+    border-collapse: collapse;
+    width: 50%;
+    /* a porcentagem é para que idependente da tela ela vai fica com 50% */
+}
+td,th{
+    border: 2px solid #333;
+    padding:10px;
+    text-align:center;
+}
