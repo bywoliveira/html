@@ -2,6 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background-color: rgb(179, 50, 50);
 }
 
 section {
@@ -12,4 +13,163 @@ h2 {
   margin-top: 40px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 10px;
+  text-align: center;
+  /* vai centraliza apenas no centro os h2 */
 }
+.grid-container{
+    display:grid;
+    background-color: #ff821c;
+    /* por forado item grid */
+    padding: 10px;
+    /* espaço interno entre o conteúdo e a borda */
+    gap: 10px;
+    /* espaçamento de 10px entre os itens na coluna e na horizontal */
+}
+.item-grid{
+    background-color: #1de724;
+    color: rgb(66, 55, 191);
+    /* cor verde é para o fundo do item e a azul para a cor da letra */
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 5px;
+}  
+.basico{
+    grid-template-columns: 1fr 1fr 1fr;
+    /* container divido em 3 */
+    grid-template-rows: 100px 100px;
+    /* são 100px da primeira linha e 100px para a segunda */
+    /* vai deixa 3 em cima e 3 embaixo certinho */
+}
+.repeat-minmax{
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    /* vai criar 4 colunas, com o tamanho minimo de 100px e 1 fração pra pega a tela inteira */
+    /* outro jeito de definir quantas colunas vão estar, igaul o outro de cima */
+    /*4 colunas com largura minima de 100px(manter proporcao dos itens  */
+    grid-auto-rows: 100px;
+    /* se você não souber quantas linhas vai ter, você coloca o auto rows, vai mexe na altura*/
+    grid-gap: 20px;
+    /*o espaço entre os itens na linha e nas colunas  */
+}
+.auto-fit{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* o autofit ajusta o número de colunas conforme o espaço disponível */
+    grid-auto-rows: 100px ;
+    grid-gap: 10px;
+}
+.sobreposicao{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+.item1{
+    grid-column: 1/3;
+    /* Ocupa duas colunas */
+    /* ocupa mais de uma célula */
+    /* ocupa da coluna 1 até o começoda terceira coluna */
+    /* se trocar o 3 por 4, vai ficar 1 maior em cima e os outros 3 embaixo dele certinho */
+    grid-row: 1/3;
+    /* pega as linhas ao invès da coluna */
+}
+.item2{
+grid-column: 2/4;
+grid-row: 1/2;
+background-color: rgba(255,0, 0 ,0.371);
+}
+
+
+.item3{
+grid-column: 1/4;
+/* grid-row: 1/2; */
+}
+.item4{
+    grid-column: 3/4;
+}
+.areas-nomeadas{
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    /* precisa nomear 2 vezes para pegar a tela inteira */
+    "menu conteudo"
+    "rodape rodape ";
+    /* mesma coisa que o cabeçalho */   
+    /* falar como quer que fica a estrutura */
+    grid-template-columns: 1fr 2fr;
+    /* 3 colunas com proporcções difeentes */
+    grid-template-rows: auto;
+    /* linha ta no auto */
+    grid-gap: 10px;
+}
+.cabecalho{
+    grid-area:cabecalho;
+    background-color: #4caf50;
+}
+.menu{
+    grid-area:menu;
+    background-color: #2196f3;
+}
+.conteudo{
+    grid-area:conteudo;
+    background-color: #f44336;
+}
+.rodape{
+    grid-area:rodape;
+    background-color: #9c27b0;
+}
+.grid-aninhado{
+    grid-template-columns: repeat(2, 1fr);
+    /* Define o template, se vai ter 1,2,3,4 colunas */
+    /* o grid column é para trabalhar apenas 1 quadradinho */
+    grid-gap:10px;
+    /* um pai dentro do item 1 */
+}
+.subgrid-container{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-gap: 5px;
+}
+.subitem-grid{
+background-color: #ff9800;
+padding: 10px;
+color: #fff;
+}
+ .layout-pagina{
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer" ;
+    grid-template-columns:1fr 2fr 1fr ;
+    /* organiza os fr em 3 colunas, sendo a segunda maior porque ela tem 3 coisas */
+    grid-template-rows: auto 300px auto;
+    /* vai determinar a altura das colunas */
+    grid-gap:10px;
+    
+ }
+
+ .header{
+    grid-area:header;
+    /* é bom usar o nome das classes */
+    background-color: #3F51B5;
+    color: white;
+    /* precisa ser o nome que ta la e tem que repetir 3 vezes poeque tem 3 colunas */
+ }
+
+.nav{
+    grid-area:nav;
+    background-color: #F44336;
+   
+} 
+.main{
+    grid-area:main;
+    background-color: #2196F3;
+    
+}
+.aside{
+    grid-area:aside;
+    background-color: #FF9800;
+    
+}
+.footer{
+    grid-area:footer;
+    background-color: #4CAF50;
+}
+
